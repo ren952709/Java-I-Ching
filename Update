@@ -1,0 +1,535 @@
+import java.util.Scanner;
+
+public class y2021m11d4 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int n1, n2, n3;
+		String s1,s2 = "您的問題為：",s3 = "此問題解答卦象為：";
+		String s,ss,sss;
+
+//區分用
+		System.out.println("易經占卜");
+		System.out.println("請輸入您的問題：");
+		s1 = scanner.nextLine();
+
+//區分用		
+		
+		System.out.println("(僅可輸入數字)請輸入第一個三位數字：");
+		n1 = scanner.nextInt();
+		
+		while (n1 >= 1000 || n1 <=99 ) {
+				System.out.println("(僅可輸入數字)重新輸入第一個三位數字：");
+				n1 = scanner.nextInt();
+		} 
+		n1 %= 8;
+	
+		System.out.println("(僅可輸入數字)請輸入第二個三位數字：");
+		n2 = scanner.nextInt();
+		while (n2 >= 1000 || n2 <=99) {
+			System.out.println("(僅可輸入數字)重新輸入第二個三位數字：");
+			n2 = scanner.nextInt();
+		} 
+		n2 %= 8;
+
+		//區分用		
+						
+		System.out.println("(僅可輸入數字)請輸入第三個三位數字：");
+		n3 = scanner.nextInt();
+		while (n3 >= 1000 || n3 <=99) {
+			System.out.println("(僅可輸入數字)重新輸入第三個三位數字：");
+			n3 = scanner.nextInt();
+		} 
+		n3 %= 6;
+
+		if (n3 >=3) {
+			if (n3 == 3) {
+				sss = "三爻";
+			}
+			else if (n3 == 4) {
+				sss = "四爻";
+			}
+			else {
+				sss = "五爻";
+			}
+		}
+		
+		else {
+			if (n3 == 0) {
+				sss = "六爻";
+			}
+			else if (n3 == 1) {
+				sss ="一爻";
+			}
+			else {
+				sss ="二爻";
+			}
+		}
+
+
+if (n1 >=4) {//開始分下卦
+	if(n1 == 4 || n1 == 5) {
+//區分				
+		if(n1 == 4 ) {//這裡是下4
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "51 ䷲ 震卦 震為雷" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee51");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "42 ䷩ 益卦 風雷益" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee42");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "3 ䷂ 屯卦 水雷屯" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee03");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "27 ䷚ 頤卦 山雷頤" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee27");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "46 ䷗ 復卦 地雷復" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee24");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "25 ䷘ 无妄卦 天雷无妄" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee25");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "17 ䷐ 隨卦 澤雷隨" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee17");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "21 ䷔ 噬嗑卦 火雷噬嗑" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee21");
+					}
+					
+				}
+			}
+		}
+
+//區分				
+		
+		else {//這裡是下5
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "32 ䷟ 恒卦 雷風恒" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee32");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "57 ䷸ 巽卦 巽為風" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee57");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "48 ䷯ 井卦 水風井" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee48");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "18 ䷑ 蠱卦 山風蠱" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee18");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "46 ䷭ 升卦 地風升" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee46");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "44 ䷫ 姤卦 天風姤" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee44");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "28 ䷛ 大過卦 澤風大過" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee28");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "50 ䷱ 鼎卦 火風鼎" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee50");
+					}
+					
+				}
+			}
+		}
+	}
+	
+//區分
+	else {
+		if(n1 == 6) {//這裡是下6
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "40 ䷧ 解卦 雷水解" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee40");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "59 ䷺ 渙卦 風水渙" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee59");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "29 ䷜ 坎卦 坎為水" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee29");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "4 ䷃ 蒙卦 山水蒙" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee04");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "7.䷆ 師卦 地水師" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee07");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "6 ䷅ 訟卦 天水訟" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee06");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "47 ䷮ 困卦 澤水困" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee47");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "64 ䷿ 未濟卦 火水未濟" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee64");
+					}
+					
+				}
+			}
+		}
+//區分
+		else {//這裡是下7
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "62 ䷽ 小過卦 雷山小過" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee62");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "53 ䷴ 漸卦 風山漸" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee53");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "39 ䷦ 蹇卦 水山蹇" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee39");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "52 ䷳ 艮卦 艮為山" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee52");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "15 ䷎ 謙卦 地山謙" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee15");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "33 ䷠ 遯卦 天山遯" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee33");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "31 ䷞ 咸卦 澤山咸" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee31");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "56 ䷷ 旅卦 火山旅" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee56");
+					}
+					
+				}
+			}
+		}
+	}
+}
+//區分
+else {
+	if(n1 == 0 || n1 == 1) {
+		if (n1 == 0) {//這裡下8
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "16 ䷏ 豫卦 雷地豫" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee16");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "20 ䷓ 觀卦 風地觀" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee20");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "8 ䷇ 比卦 水地比" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee08");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "23 ䷖ 剝卦 山地剝" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee23");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "2 ䷁ 坤卦 坤為地" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee02");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "12 ䷋ 否卦 天地否" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee12");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "45 ䷬ 萃卦 澤地萃" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee45");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "35 ䷢ 晉卦 火地晉" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee35");
+					}
+					
+				}
+			}
+		}
+//區分
+		else {//這裡下1
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "34䷡ 大壯卦 雷天大壯" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee34");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "9 ䷈ 小畜卦 風天小畜" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee09");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "5 ䷄ 需卦 水天需" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee05");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "26 ䷙ 大畜卦 山天大畜" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee26");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "11 ䷊ 泰卦 地天泰" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee11");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "1 ䷀ 乾卦 乾為天" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee01");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "43 ䷪ 夬卦 澤天夬" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee43");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "14 ䷍ 大有卦 火天大有" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee14");
+					}
+					
+				}
+			}
+		}
+	}
+//區分
+	else {
+		if (n1 == 2) {//這裡下2
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "54 ䷵ 歸妹卦 雷澤歸妹" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee54");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "61 ䷼ 中孚卦 風澤中孚" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee61");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "60 ䷻ 節卦 水澤節" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee60");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "41 ䷨ 損卦 山澤損" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee41");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "19 ䷒ 臨卦 地澤臨" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee19");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "10 ䷉ 履卦 天澤履" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee10");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "58 ䷹ 兌卦 兌為澤" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee58");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "38 ䷥ 睽卦 火澤睽" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee38");
+					}
+					
+				}
+			}
+		}
+//區分
+		else {//這裡下3
+			if (n2 >=4) {//開始分上卦
+				if(n2 == 4 || n2 == 5) {
+					if(n2 == 4 ) {//這裡是上4
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "55 ䷶ 豐卦 雷火豐" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee55");
+					}
+					else {//這裡是上5
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "37 ䷤ 家人卦 風火家人" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee37");
+					}
+				}
+				else {
+					if(n2 == 6) {//這裡是上6
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "63 ䷾ 既濟卦 水火既濟" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee63");
+					}
+					else {//這裡是上7
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "22 ䷕ 賁卦 山火賁" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee22");
+					}
+				}
+			}
+			else {
+				if(n2 == 0 || n2 == 1) {
+					if (n1 == 0) {//這裡是上8
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "36 ䷣ 明夷卦 地火明夷" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee36");
+					}
+					else {//這裡上1
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "13 ䷌ 同人卦 天火同人" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee13");
+					}
+				}
+				else {
+					if (n2 == 2) {//這裡上2
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "49 ䷰ 革卦 澤火革" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee49");
+					}
+					else {//這裡上3
+						System.out.println(s2 + s1);
+						System.out.println(s3 + "30 ䷝ 離卦 離為火" + sss);
+						System.out.println("https://www.eee-learning.com/book/neweee30");
+					}
+					
+				}
+			}
+		}
+		
+	}
+}
+}
+}
