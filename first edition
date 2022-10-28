@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class yichan {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int n1, n2, n3;
+		String s1,s2 = "您的問題為：",s3 = "此問題解答卦象為：",s4 = "上卦" , s5 = "下卦" , s6 ="爻";
+		
+		System.out.println("請輸入您的問題：");
+		s1 = scanner.nextLine();
+		
+		System.out.println("請輸入第一個三位數字：");
+		n1 = scanner.nextInt();
+		while (n1 >= 1000 || n1 <=99) {
+				System.out.println("重新輸入第一個三位數字：");
+				n1 = scanner.nextInt();
+		} 
+		n1 %= 8;
+	
+		System.out.println("請輸入第二個三位數字：");
+		n2 = scanner.nextInt();
+		while (n2 >= 1000 || n2 <=99) {
+			System.out.println("重新輸入第二個三位數字：");
+			n2 = scanner.nextInt();
+		} 
+		n2 %= 8;
+		
+		System.out.println("請輸入第三個三位數字：");
+		n3 = scanner.nextInt();
+		while (n3 >= 1000 || n3 <=99) {
+			System.out.println("重新輸入第三個三位數字：");
+			n3 = scanner.nextInt();
+		} 
+		n3 %= 6;
+
+		System.out.println(s2 + s1);
+		System.out.println(s3 + n1 + s4 + n2 + s5 + n3 + s6);
+	}
+}
